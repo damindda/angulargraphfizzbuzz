@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+$color-white: #fff;
+$chartbase-primary: #122B3C;
+
+@font-face {
+  font-family: "HiraKakuProN-W3";
+  src: url(../src/assets/fonts/hirakakupro-w3-opentype_bigfontsite.com.otf);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "HiraKakuProN-W3", sans-serif;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: $chartbase-primary;
+  padding: 20px;
+  .logo {
+    a {
+      color: $color-white;
+    }
+  }
+  .nav-right {
+    display: flex;
+    flex-direction: row;
+    li {
+      list-style: none;
+      padding: 8px;
+      a {
+        color: $color-white;
+        text-decoration: none;
+      }
+    }
+  }
+}
