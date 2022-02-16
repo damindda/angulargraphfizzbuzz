@@ -1,3 +1,4 @@
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,6 +11,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import ('./modules/dashboard/dashboard.module').then((module)=> module.DashboardModule)
+  },
+  {
+    path: '**',
+    component: PagenotfoundComponent
   }
 
 ];
