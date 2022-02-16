@@ -30,7 +30,7 @@ a {
   justify-content: space-between;
   width: 100%;
   background-color: $chartbase-primary;
-  padding: 20px;
+  padding: 20px 30px;
   .logo {
     a {
       color: $color-white;
@@ -48,4 +48,8 @@ a {
       }
     }
   }
+}
+
+.body-content{
+  padding: 30px;
 }
