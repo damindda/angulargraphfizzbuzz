@@ -7,7 +7,7 @@ import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.componen
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { ScatterPlotChartComponent } from './scatter-plot-chart/scatter-plot-chart.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
-
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,10 @@ import { LineChartComponent } from './line-chart/line-chart.component';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ]
 })
 export class DashboardModule { }
