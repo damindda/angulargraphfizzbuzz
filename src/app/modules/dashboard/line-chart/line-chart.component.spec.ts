@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing'
 import { LineChartComponent } from './line-chart.component';
+import { GraphdataService } from '../../../services/graphdata.service';
 
 describe('LineChartComponent', () => {
   let component: LineChartComponent;
@@ -8,7 +9,9 @@ describe('LineChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LineChartComponent ]
+      imports: [ HttpClientTestingModule ],
+      declarations: [ LineChartComponent ],
+      providers: [GraphdataService]
     })
     .compileComponents();
   });
