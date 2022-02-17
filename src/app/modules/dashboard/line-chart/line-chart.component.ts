@@ -14,7 +14,14 @@ export class LineChartComponent implements OnInit {
       trigger: 'axis'
     },
     legend: {
-      data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+      data: ['USA', 'Europe', 'Asia', 'Africa'],
+      orient: 'horizontal',
+      lineStyle: {
+        opacity: 0
+      },
+      textStyle: {
+        color: '#fff'
+      }
     },
     grid: {
       left: '3%',
@@ -22,49 +29,43 @@ export class LineChartComponent implements OnInit {
       bottom: '3%',
       containLabel: true
     },
-    toolbox: {
-      feature: {
-        saveAsImage: {}
-      }
+    label: {
+      color: '#fff'
     },
     xAxis: {
       type: 'category',
       boundaryGap: false,
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+      axisLabel: {
+        color: '#fff'
+      }
     },
     yAxis: {
-      type: 'value'
+      type: 'value',
+      axisLabel: {
+        color: '#fff'
+      }
     },
     series: [
       {
-        name: 'Email',
+        name: 'USA',
         type: 'line',
-        stack: 'Total',
-        data: [120, 132, 101, 134, 90, 230, 210]
+        data: [120, 132, 101, 734, 490, 230, 20, 232, 11, 234, 190, 30, 20]
       },
       {
-        name: 'Union Ads',
+        name: 'Europe',
         type: 'line',
-        stack: 'Total',
-        data: [220, 182, 191, 234, 290, 330, 310]
+        data: [690, 482, 591, 434, 390, 330, 310, 101, 134, 910, 550, 820]
       },
       {
-        name: 'Video Ads',
+        name: 'Asia',
         type: 'line',
-        stack: 'Total',
-        data: [150, 232, 201, 154, 190, 330, 410]
+        data: [350, 232, 201, 154, 870, 330, 410, 332, 656, 354, 290, 30]
       },
       {
-        name: 'Direct',
+        name: 'Africa',
         type: 'line',
-        stack: 'Total',
-        data: [320, 332, 301, 334, 390, 330, 320]
-      },
-      {
-        name: 'Search Engine',
-        type: 'line',
-        stack: 'Total',
-        data: [820, 932, 901, 934, 1290, 1330, 1320]
+        data: [780, 832, 267, 634, 770, 130, 320, 201, 192, 427, 734, 390]
       }
     ]
   };
