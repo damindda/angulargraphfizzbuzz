@@ -1,3 +1,4 @@
+import { from, Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
 
@@ -8,41 +9,36 @@ import { EChartsOption } from 'echarts';
 })
 export class DoughnutChartComponent implements OnInit {
 
+
+  data = [
+    { value: 23000, name: 'USA' },
+    { value: 12347, name: 'Africa' },
+    { value: 20129, name: 'Europe' },
+    { value: 15825, name: 'Asia' }
+  ];
+
+
   chartOptions: EChartsOption = {
     tooltip: {
       trigger: 'item'
-    },
-    legend: {
-      top: '5%',
-      left: 'center'
     },
     series: [
       {
         name: 'Access From',
         type: 'pie',
         radius: ['40%', '70%'],
-        avoidLabelOverlap: false,
+        data: this.data,
         label: {
-          show: false,
-          position: 'center'
+          color: '#fff'
         },
+        color: ["#83FCFF", "#5E98D2", "#F4EEBF", "#C39AE5"],
         emphasis: {
-          label: {
-            show: true,
-            fontSize: '40',
-            fontWeight: 'bold'
+          itemStyle: {
+            shadowBlur: 0,
+            shadowOffsetX: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
           }
-        },
-        labelLine: {
-          show: false
-        },
-        data: [
-          { value: 1048, name: 'Search Engine' },
-          { value: 735, name: 'Direct' },
-          { value: 580, name: 'Email' },
-          { value: 484, name: 'Union Ads' },
-          { value: 300, name: 'Video Ads' }
-        ]
+        }
       }
     ]
   };
