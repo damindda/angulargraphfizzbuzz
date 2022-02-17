@@ -1,0 +1,50 @@
+[
+  {
+ "month": "JAN",
+ "value": "21"
+},
+{
+  "month": "FEB",
+  "value": "56"
+},
+{
+  "month": "MAR",
+  "value": "4"
+},
+{
+  "month": "APR",
+  "value": "61"
+},
+{
+  "month": "MAY",
+  "value": "45"
+},
+{
+  "month": "JUN",
+  "value": "56"
+},
+{
+  "month": "JUL",
+  "value": "12"
+},
+{
+  "month": "AUG",
+  "value": "31"
+},
+{
+  "month": "SEP",
+  "value": "37"
+},
+{
+  "month": "OCT",
+  "value": "42"
+},
+{
+  "month": "NOV",
+  "value": "79"
+},
+{
+  "month": "DEC",
+  "value": "11"
+}
+]

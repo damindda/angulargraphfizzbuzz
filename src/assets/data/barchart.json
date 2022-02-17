@@ -1,0 +1,18 @@
+[
+  {
+    "region": "USA",
+    "value": "190"
+  },
+  {
+    "region": "Europe",
+    "value": "270"
+  },
+  {
+    "region": "Asia",
+    "value": "210"
+  },
+  {
+    "region": "Africa",
+    "value": "130"
+  }
+]
