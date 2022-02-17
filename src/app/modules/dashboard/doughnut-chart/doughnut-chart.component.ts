@@ -47,7 +47,6 @@ export class DoughnutChartComponent implements OnInit {
   getDoughnutChartsData() {
     this.subscription = this.barChartService.getDoughnutChartsData().subscribe((data) => {
       data.forEach(values => {
-        console.log(values);
         this.graphValues.push(values)
       })
     });

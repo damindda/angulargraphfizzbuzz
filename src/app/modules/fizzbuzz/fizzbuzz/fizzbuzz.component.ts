@@ -49,7 +49,6 @@ export class FizzbuzzComponent implements OnInit {
     .pipe(
       skip(1),
       map(([number, fizz, buzz]) => {
-        console.log(fizz, buzz, number)
         return fizz + buzz || number.toString()
       }),
       takeUntil(this.stopFizzBuzzSubject)
