@@ -1,6 +1,7 @@
-import { from, Observable } from 'rxjs';
+import { from, Observable, Subscription } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
+import { GraphdataService } from 'src/app/services/graphdata.service';
 
 @Component({
   selector: 'app-doughnut-chart',
@@ -8,15 +9,8 @@ import { EChartsOption } from 'echarts';
   styleUrls: ['./doughnut-chart.component.scss']
 })
 export class DoughnutChartComponent implements OnInit {
-
-
-  data = [
-    { value: 23000, name: 'USA' },
-    { value: 12347, name: 'Africa' },
-    { value: 20129, name: 'Europe' },
-    { value: 15825, name: 'Asia' }
-  ];
-
+  subscription!: Subscription;
+  graphValues: any = [];
 
   chartOptions: EChartsOption = {
     tooltip: {
@@ -27,7 +21,7 @@ export class DoughnutChartComponent implements OnInit {
         name: 'Access From',
         type: 'pie',
         radius: ['40%', '70%'],
-        data: this.data,
+        data: this.graphValues,
         label: {
           color: '#fff'
         },
@@ -43,10 +37,20 @@ export class DoughnutChartComponent implements OnInit {
     ]
   };
 
-  constructor() {
+  constructor(private barChartService: GraphdataService) {
    }
 
   ngOnInit(): void {
+    this.getDoughnutChartsData();
+  }
+
+  getDoughnutChartsData() {
+    this.subscription = this.barChartService.getDoughnutChartsData().subscribe((data) => {
+      data.forEach(values => {
+        console.log(values);
+        this.graphValues.push(values)
+      })
+    });
   }
 
 

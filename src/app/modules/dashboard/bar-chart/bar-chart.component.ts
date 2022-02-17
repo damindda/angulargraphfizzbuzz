@@ -51,6 +51,10 @@ export class BarChartComponent implements OnInit, OnDestroy {
   constructor(private barChartService: GraphdataService) { }
 
   ngOnInit(): void {
+   this.getBarChartsData();
+  }
+
+  getBarChartsData() {
     this.subscription = this.barChartValues$.subscribe((data) => {
       data.forEach(values => {
         this.regionValues.push(values.region)

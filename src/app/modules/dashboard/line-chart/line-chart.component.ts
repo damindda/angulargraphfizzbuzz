@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
+import { GraphdataService } from 'src/app/services/graphdata.service';
 
 @Component({
   selector: 'app-line-chart',
