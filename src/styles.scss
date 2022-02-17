@@ -14,11 +14,24 @@ $chartbase-primary: #122B3C;
   box-sizing: border-box;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 body {
   font-family: "HiraKakuProN-W3", sans-serif;
   font-size: 1rem;
   padding: 0;
   margin: 0;
+  background-image: linear-gradient(180deg, #23445C 0%, #53B8B1 100%);
+  background-repeat: no-repeat;
+  background-color: #53B8B1;
 }
 
 a {
@@ -45,6 +58,10 @@ a {
       a {
         color: $color-white;
         text-decoration: none;
+        padding:4px 6px;
+      }
+      .active{
+        border-bottom: 1px solid #61E9E5;
       }
     }
   }
@@ -52,4 +69,78 @@ a {
 
 .body-content{
   padding: 30px;
+}
+
+
+.btn{
+  border: none;
+  padding: 20px;
+  color: $color-white;
+  margin-right: 20px;
+  cursor: pointer;
+  border-radius: 38px;
+  width: 100%;
+}
+
+.btn-primary {
+  background: rgba(18,60,20,0.50);
+  box-shadow: 0 2px 4px 0 rgba(142,173,165,0.50), inset 0 1px 3px 0 rgba(0,0,0,0.50);
+}
+
+.btn-secondary {
+  background: rgba(85,30,30,0.50);
+  box-shadow: 0 2px 4px 0 rgba(142,173,165,0.50), inset 0 1px 3px 0 rgba(0,0,0,0.50);
+}
+
+.input-box {
+  border-radius: 5px;
+  border-radius: 5px;
+  height: 60px;
+  width: 100%;
+  font-size: 2rem;
+  padding: 6px;
+  margin: 12px 0;
+}
+
+.input-container {
+  background: rgba(219,255,247,0.20);
+  box-shadow: 0 2px 4px 0 rgba(142,173,165,0.50), inset 0 2px 3px 0 rgba(0,0,0,0.50);
+}
+
+.result-container {
+  background: rgba(18, 43, 60, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(142, 173, 165, 0.5),
+    inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.primary-color-white {
+  color: $color-white;
+}
+
+.row{
+  display: flex;
+  flex-direction: column;
+}
+
+.content-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.fizz-buzz-container{
+  width: 30%;
+  margin: 30px;
+}
+
+.fizz-buzz-btn-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1320px) {
+  .fizz-buzz-container{
+    width: 60%;
+  }
 }
