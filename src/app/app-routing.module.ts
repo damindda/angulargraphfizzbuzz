@@ -13,6 +13,14 @@ const routes: Routes = [
     loadChildren: () => import ('./modules/dashboard/dashboard.module').then((module)=> module.DashboardModule)
   },
   {
+    path: 'fizzbuzz',
+    loadChildren: () => import ('./modules/fizzbuzz/fizzbuzz.module').then((module)=> module.FizzbuzzModule)
+  },
+  {
+    path: 'factorial',
+    loadChildren: () => import ('./modules/factorial/factorial.module').then((module)=> module.FactorialModule)
+  },
+  {
     path: '**',
     component: PagenotfoundComponent
   }
